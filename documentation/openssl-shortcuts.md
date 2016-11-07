@@ -105,7 +105,7 @@ openssl ocsp -port 127.0.0.1:2560 -text -sha256 \
 
 
 openssl ocsp -CAfile intermediate/certs/ca-chain.cert.pem \
-      -url http://superjet.hopto.org:2560 -resp_text \
+      -url http://yourocspresponder -resp_text \
       -issuer intermediate/certs/intermediate.cert.pem \
       -cert intermediate/certs/pisuperjet.hopto.org.cert.pem
 
