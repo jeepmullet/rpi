@@ -1,0 +1,179 @@
+## Pi-hole ad-list default sources. Updated 22/05/2016 #########################
+#                                                                              #
+#  To make changes to this file:                                               #
+#    1. run `cp /etc/pihole/adlists.default /etc/pihole/adlists.list`          #
+#    2. run `nano /etc/pihole/adlists.list`                                    #
+#    3. Uncomment or comment any of the below lists                            #
+#                                                                              #
+#  Know of any other lists? Feel free to let us know about them, or add them   #
+#  to this file!                                                               #
+################################################################################
+
+# The below list amalgamates several lists we used previously.
+# See `https://github.com/StevenBlack/hosts` for details
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+# Other lists we consider safe:
+http://mirror1.malwaredomains.com/files/justdomains
+http://sysctl.org/cameleon/hosts
+https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist
+https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+##################manual add
+https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt
+https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist
+https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+https://raw.githubusercontent.com/Firestorrrm/Minimal-Hosts-Blocker/master/etc/MinimalHostsBlocker/minimalhosts.txt
+http://pgl.yoyo.org/as/serverlist.php?hostformat=nohtml&showintro=1&mimetype=plaintext
+http://someonewhocares.org/hosts/hosts
+http://sysctl.org/cameleon/hosts
+https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+http://mirror1.malwaredomains.com/files/justdomains
+https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+http://www.malwaredomainlist.com/hostslist/hosts.txt
+############local################
+file:///var/www/html/lists/Dawsey_hosts.txt
+file:///var/www/html/lists/volker.txt
+file:///var/www/html/lists/malc0de.txt
+file:///var/www/html/lists/phish.txt
+file:///var/www/html/lists/ransom_domain.txt
+file:///var/www/html/lists/ransom_url.txt
+file:///var/www/html/lists/spotify_hosts.txt
+file:///var/www/html/lists/master_hosts.txt
+file:///var/www/html/lists/telemetry_hosts.txt
+file:///var/www/html/lists/uncheckyads_hosts.txt
+file:///var/www/html/lists/adaway_hosts.txt
+file:///var/www/html/lists/207net_hosts.txt
+file:///var/www/html/lists/dead_hosts.txt
+file:///var/www/html/lists/risk_hosts.txt
+file:///var/www/html/lists/smap_hosts.txt
+file:///var/www/html/lists/malwaredomainlist_host.txt
+file:///var/www/html/lists/mvps_hosts.txt
+file:///var/www/html/lists/someonewhocares_hosts.txt
+file:///var/www/html/lists/tyzbit_hosts.txt
+file:///var/www/html/lists/yoyo_hosts.txt
+file:///var/www/html/lists/blacklist.txt
+file:///var/www/html/lists/lehigh.txt
+file:///var/www/html/lists/malwaredomains.com.txt
+file:///var/www/html/lists/network_sec_grabho.txt
+file:///var/www/html/lists/someonewhocares_no_127.txt
+file:///var/www/html/lists/someonewhocares_no_127_no_www.txt
+#######HPHOSTS##########
+https://hosts-file.net/exp.txt
+https://hosts-file.net/hjk.txt
+https://hosts-file.net/emd.txt
+https://hosts-file.net/psh.txt
+https://hosts-file.net/ad_servers.txt
+https://hosts-file.net/hfs.txt
+https://hosts-file.net/fsa.txt
+https://hosts-file.net/wrz.txt
+https://hosts-file.net/grm.txt
+# hosts-file.net list. Updated frequently, but has been known to block legitimate sites.
+https://hosts-file.net/ad_servers.txt
+# Windows 10 telemetry list
+https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/win10/spy.txt
+# Quidsup's tracker list
+https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt
+# Block the BBC News website Breaking News banner
+#######################http://raw.githubusercontent.com/BreakingTheNews/BreakingTheNews.github.io/master/hosts
+# List of known C&C malware servers (see https://github.com/pi-hole/pi-hole/issues/528)
+#######################http://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt
+# Untested Lists:
+#######################http://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt
+#######################http://raw.githubusercontent.com/Dawsey21/Lists/master/main-blacklist.txt
+#######################http://malwaredomains.lehigh.edu/files/domains.txt
+# Following two lists should be used simultaneously: (readme https://github.com/notrackin$
+#######################http://raw.github.com/notracking/hosts-blocklists/master/hostnames.txt
+#######################http://raw.github.com/notracking/hosts-blocklists/master/domains.txt
+# Combination of serveral host files on the internet (warning some facebook domains are a$
+#######################http://raw.githubusercontent.com/mat1th/Dns-add-block/master/hosts
+# copied from others and not used for some reason I do not remember
+#######################http://cdn.files.trjlive.com/hosts/hosts-v8.txt
+#######################http://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt
+#######################http://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+#######################http://zeustracker.abuse.ch/blocklist.php?download=domainblocklist
+#######################http://sysctl.org/cameleon/hosts
+#######################http://securemecca.com/Downloads/hosts.txt
+#######################http://hosts.neocities.org/
+#######################http://tcpdiag.dl.sourceforge.net/project/adzhosts/HOSTS.txt
+#######################http://optimate.dl.sourceforge.net/project/adzhosts/HOSTS.txt
+#######################http://mirror1.malwaredomains.com/files/justdomains
+#######################http://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-fi$
+#######################http://spam404bl.com/spam404scamlist.txt
+#######################http://malwaredomains.lehigh.edu/files/domains.txt
+#######################http://download.networktoolbox.de/dnsmasq.conf.tail
+#######################http://jansal.googlecode.com/svn/trunk/adblock/hosts
+#######################http://www.sa-blacklist.stearns.org/sa-blacklist/sa-blacklist.current
+#######################http://easylist-downloads.adblockplus.org/malwaredomains_full.txt
+#######################http://easylist-downloads.adblockplus.org/easyprivacy.txt
+#######################http://easylist-downloads.adblockplus.org/easylist.txt
+#######################http://easylist-downloads.adblockplus.org/fanboy-annoyance.txt
+#######################http://www.fanboy.co.nz/adblock/opera/urlfilter.ini
+#######################http://www.fanboy.co.nz/adblock/fanboy-tracking.txt
+#sourceforge
+#######################http://sourceforge.net/projects/adzhosts/files/HOSTS.txt/download?use_mirror=heanet&download=&failedmirror=optimate.dl.sourceforge.net
+# hosts-file.net list. Updated frequently, but has been known to block legitimate sites.
+https://hosts-file.net/ad_servers.txt
+# Quidsup's tracker list
+https://raw.githubusercontent.com/quidsup/notrack/master/trackers.txt
+# ADZHOSTS list. Has been known to block legitimate domains
+#######################http://optimate.dl.sourceforge.net/project/adzhosts/HOSTS.txt
+# Windows 10 telemetry list
+#######################http://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/win10/spy.txt
+# Securemecca.com list - Also blocks "adult" sites (pornography/gambling etc)
+#######################http://securemecca.com/Downloads/hosts.txt
+# Block the BBC News website Breaking News banner
+#######################http://raw.githubusercontent.com/BreakingTheNews/BreakingTheNews.github.io/master/hosts
+# List of known C&C malware servers (see https://github.com/pi-hole/pi-hole/issues/528)
+#######################http://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt
+# Untested Lists:
+#######################http://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt
+#######################http://raw.githubusercontent.com/Dawsey21/Lists/master/main-blacklist.txt
+#######################http://malwaredomains.lehigh.edu/files/domains.txt
+# Following two lists should be used simultaneously: (readme https://github.com/notracking/hosts-blocklists/)
+#######################http://raw.github.com/notracking/hosts-blocklists/master/hostnames.txt
+#######################http://raw.github.com/notracking/hosts-blocklists/master/domains.txt
+# Combination of serveral host files on the internet (warning some facebook domains are also blocked but you can go to facebook.com). See https://github.com/mat1th/Dns-add-block for more information.
+#######################http://raw.githubusercontent.com/mat1th/Dns-add-block/master/hosts
+#######################http://openphish.com/feed.txt
+#######################http://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt
+#######################http://hosts-file.net/exp.txt
+#######################http://hosts-file.net/hjk.txt
+#######################http://hosts-file.net/emd.txt
+#######################http://hosts-file.net/psh.txt
+#######################http://hosts-file.net/ad_servers.txt
+#######################http://hosts-file.net/hfs.txt
+#######################http://hosts-file.net/fsa.txt
+#######################http://hosts-file.net/wrz.txt
+#######################http://hosts-file.net/grm.txt
+############################openphish needs formatting#
+############################https://openphish.com/feed.txt
+#hpHosts Exploits Blocks exploits.
+#######################http://hosts-file.net/exp.txt
+#hpHosts Hijacking Blocks hijacking.
+#######################http://hosts-file.net/hjk.txt
+#hpHosts Malware Blocks malware.
+#######################http://hosts-file.net/emd.txt
+#hpHosts Phishing Blocks phishing
+#######################http://hosts-file.net/psh.txt
+#hpHosts Ad and Tracking Blocks advertisements and trackers.
+#######################http://hosts-file.net/ad_servers.txt
+#hpHosts Forum Spam Blocks spam on hpHosts forum.
+#######################http://hosts-file.net/hfs.txt
+#hpHosts Fraud Blocks fraud.
+#######################http://hosts-file.net/fsa.txt
+#hpHosts Misleading Marketing Blocks misleading marketing.
+#######################http://hosts-file.net/mmt.txt
+#hpHosts Pharmacy Blocks illegal pharmacy sites.
+#######################http://hosts-file.net/pha.txt
+#hpHosts Piracy Blocks piracy.
+#######################http://hosts-file.net/wrz.txt
+#hpHosts Spam Blocks spam.
+# http://hosts-file.net/grm.txt
+# ADZHOSTS list. Has been known to block legitimate domains
+#######################http://optimate.dl.sourceforge.net/project/adzhosts/HOSTS.txt
+# Securemecca.com list - Also blocks "adult" sites (pornography/gambling etc)
+#######################http://securemecca.com/Downloads/hosts.txt
+# Mahakala list. Has been known to block legitimage domains including the entire .com range.
+# Warning: Due to the sheer size of this list, the web admin console will be unresponsive.
+#######################http://adblock.mahakala.is/
