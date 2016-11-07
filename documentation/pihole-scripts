@@ -1,0 +1,40 @@
+#!/bin/bash
+#####Download non-local lists#######
+curl http://malc0de.com/bl/ZONES  | sed 's/"  {.*//g' | sed 's/zone "//g' | tail -n +8 >/var/www/html/lists/malc0de.txt
+curl http://www.volkerschatz.com/net/adpaths | cut -d'/' -f2 >/var/www/html/lists/volker.txt
+#curl https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt | cut -d':' -f2 | tail -n +8  > /var/www/html/lists/ransom_domain.txt
+curl https://openphish.com/feed.txt | cut -d':' -f2 | cut -c3- | cut -d'/' -f1 > /var/www/html/lists/phish.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/SpotifyAds/hosts | cut -d'#' -f1 > /var/www/html/lists/spotify_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts | cut -d'#' -f1 > /var/www/html/lists/master_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/Telemetry/hosts | cut -d'#' -f1 > /var/www/html/lists/telemetry_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/UncheckyAds/hosts | cut -d'#' -f1 > /var/www/html/lists/uncheckyads_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/adaway.org/hosts | cut -d'#' -f1 > /var/www/html/lists/adaway_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.2o7Net/hosts | cut -d'#' -f1 > /var/www/html/lists/207net_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Dead/hosts | cut -d'#' -f1 > /var/www/html/lists/dead_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Risk/hosts | cut -d'#' -f1 > /var/www/html/lists/risk_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Spam/hosts | cut -d'#' -f1 > /var/www/html/lists/smap_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/malwaredomainlist.com/hosts | cut -d'#' -f1 > /var/www/html/lists/malwaredomainlist_host.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/mvps.org/hosts | cut -d'#' -f1 > /var/www/html/lists/mvps_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/someonewhocares.org/hosts | cut -d'#' -f1 > /var/www/html/lists/someonewhocares_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/tyzbit/hosts | cut -d'#' -f1 > /var/www/html/lists/tyzbit_hosts.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/yoyo.org/hosts | cut -d'#' -f1 > /var/www/html/lists/yoyo_hosts.txt
+#####questionable-may-break####
+#curl https://ransomwaretracker.abuse.ch/downloads/RW_DOMBL.txt | cut -d':' -f2 | tail -n +8  > /var/www/html/lists/ransom_domain.txt
+curl https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt | cut -d'/' -f3 | cut -d'!' -f2 | sed 's/-_/#/g' | cut -d'#' -f1 | cut -d'|' -f3 | cut -d'^' -f1 | sed -nr "s|(http://)?(www\.)?([^/]+).*|\3|p" | tail -n +12 > /var/www/html/lists/Dawsey_hosts.txt
+#curl https://ransomwaretracker.abuse.ch/downloads/RW_URLBL.txt | cut -d':' -f2 | cut -c3- | cut -d'/' -f1 | tail -n +8  > /var/www/html/lists/ransom_url.txt
+#curl http://malwaredomains.lehigh.edu/files/domains.txt |cut -d'#' -f1 | sed 's/[[:blank:]]/ /g' | cut -d' ' -f3 > /var/www/html/lists/lehigh.txt
+curl http://malwaredomains.lehigh.edu/files/domains.txt |cut -d'#' -f1 | sed 's/[[:blank:]]/ /g' | cut -d' ' -f3 > /var/www/html/lists/lehigh.txt
+curl http://www.malwaredomainlist.com/hostslist/hosts.txt |cut -d'#' -f2 | cut -d' ' -f3 | sed 's/www.//g' | tail -n +7 > /var/www/html/lists/malwaredomains.com.txt
+curl http://www.networksec.org/grabbho/block.txt | cut -d'#' -f3 > /var/www/html/lists/network_sec_grabho.txt
+curl http://someonewhocares.org/hosts/hosts | cut -d'#' -f1 | sed 's/127.0.0.1//g' | awk 'NF > 0'| sed 's/www.//g' | tail -n +6 > /var/www/html/lists/someonewhocares_no_127_no_www.txt
+curl http://someonewhocares.org/hosts/hosts | cut -d'#' -f1 | sed 's/127.0.0.1//g' | awk 'NF > 0'| tail -n +6 > /var/www/html/lists/someonewhocares_no_127.txt
+####NO-WWW-IN-DOMAIN-NAMES---
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Risk/hosts | cut -d'#' -f1 | sed 's/www.//g' > /var/www/html/lists/risk_hosts_no_www.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Spam/hosts | cut -d'#' -f1 | sed 's/www.//g' > /var/www/html/lists/smap_hosts_no_www.txt
+curl http://www.volkerschatz.com/net/adpaths | cut -d'/' -f2 | sed 's/www.//g' > /var/www/html/lists/volker_no_www.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/yoyo.org/hosts | cut -d'#' -f1 | sed 's/www.//g' > /var/www/html/lists/yoyo_hosts_no_www.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/add.Dead/hosts | cut -d'#' -f1 | sed 's/www.//g' > /var/www/html/lists/dead_hosts_no_www.txt
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/data/malwaredomainlist.com/hosts | cut -d'#' -f1 | sed 's/www.//g' > /var/www/html/lists/malwaredomainlist_host_no_www.txt
+curl https://openphish.com/feed.txt | cut -d':' -f2 | cut -c3- | cut -d'/' -f1 | sed 's/www.//g' > /var/www/html/lists/phish.txt
+####copy blacklist to be added to gravity for ipv6 purposes####
+cp /etc/pihole/blacklist.txt /var/www/html/lists/blacklist.txt
