@@ -10,11 +10,12 @@
       -out intermediate/private/EXAMPLE_CERT.key.pem 4096
  chmod 400 intermediate/private/EXAMPLE_CERT.key.pem
 
+## NON PROTECTED KEY FOR SHITTY DEVICES THAT YOU CANT PROTECT A PRVIATE KEY
 
- ## NON PROTECTED KEY FOR SHITTY DEVICES THAT YOU CANT PROTECT A PRVIATE KEY
  openssl genrsa \
       -out intermediate/private/EXAMPLE_CERT.key.pem 4096
  chmod 400 intermediate/private/EXAMPLE_CERT.key.pem
+
 ## CREATE SIGNING REQUEST
 
  cd /root/ca
@@ -30,16 +31,19 @@ openssl ca -config intermediate/openssl.cnf \
 -out intermediate/certs/EXAMPLE_CERT.cert.pem
 
 ##Sign SERVER KEY
+
 	openssl ca -config intermediate/openssl.cnf \
 -extensions server_cert -days 375 -notext -md sha256 \
 -in intermediate/csr/EXAMPLE_CERT.csr.pem \
 -out intermediate/certs/EXAMPLE_CERT.cert.pem
 
 ##sign-OCSP-KEY
+
  openssl ca -config intermediate/openssl.cnf \
       -extensions ocsp -days 375 -notext -md sha256 \
       -in intermediate/csr/EXAMPLE_CERT.csr.pem \
       -out intermediate/certs/EXAMPLE_CERT.cert.pem
+
 ##EXPORT AS .PFX
 
  openssl pkcs12 -export -out EXAMPLE_CERT.pfx -inkey intermediate/private/EXAMPLE_CERT.key.pem -in intermediate/certs/EXAMPLE_CERT.cert.pem -certfile intermediate/certs/intermediate.cert.pem
