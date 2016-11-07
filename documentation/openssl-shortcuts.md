@@ -4,11 +4,12 @@
 
 
 
-##GENERATE-PROTECTED-PRIVATE KEY##
-
-    openssl genrsa -aes256 \
-      -out intermediate/private/EXAMPLE_CERT.key.pem 4096
-     chmod 400 intermediate/private/EXAMPLE_CERT.key.pem
+## GENERATE-PROTECTED-PRIVATE KEY##
+```
+openssl genrsa -aes256 \
+ -out intermediate/private/EXAMPLE_CERT.key.pem 4096
+chmod 400 intermediate/private/EXAMPLE_CERT.key.pem
+```
 
 ## NON PROTECTED KEY FOR SHITTY DEVICES THAT YOU CANT PROTECT A PRVIATE KEY
 
