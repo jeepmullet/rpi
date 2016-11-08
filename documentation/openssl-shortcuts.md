@@ -45,11 +45,11 @@ openssl ca -config intermediate/openssl.cnf \
 -in intermediate/csr/EXAMPLE_CERT.csr.pem \
 -out intermediate/certs/EXAMPLE_CERT.cert.pem
 ```
-##EXPORT AS .PFX
+##EXPORT AS .PFX (to use with iOS devices or other devices that use .pfx files as profiles for connecting by identity)
 ```
 openssl pkcs12 -export -out EXAMPLE_CERT.pfx -inkey intermediate/private/EXAMPLE_CERT.key.pem -in intermediate/certs/EXAMPLE_CERT.cert.pem -certfile intermediate/certs/intermediate.cert.pem
 ```
-##EXPORT AS .PFX
+##EXPORT AS .PFX (to use with iOS devices or other devices that use .pfx files as profiles for connecting by identity)
 ```
 openssl pkcs12 -export \
 -in intermediate/certs/EXAMPLE_CERT.cert.pem \
