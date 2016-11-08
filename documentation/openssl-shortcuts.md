@@ -5,13 +5,16 @@
 
 
 ## GENERATE-PROTECTED-PRIVATE KEY##
+This is the method used to generate a user private/public keypair protected by a password.
+This method is much better than using an unencrypted private key, and what you should usually use.
 ```
 openssl genrsa -aes256 \
  -out intermediate/private/EXAMPLE_CERT.key.pem 4096
 chmod 400 intermediate/private/EXAMPLE_CERT.key.pem
 ```
-
 ## NON PROTECTED KEY FOR SHITTY DEVICES THAT YOU CANT PROTECT A PRVIATE KEY
+In some cases, the private key you are issuing cannot be protected by a password.
+Use this command to create a private key without a password
 ```
 openssl genrsa \
  -out intermediate/private/EXAMPLE_CERT.key.pem 4096
