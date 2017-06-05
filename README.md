@@ -1,6 +1,11 @@
-# rpi
-RPi all-in-one box
-- Starting RPi from scratch for RADIUS, Pi-HOLE, UNIFI CONTROLLER, LAMP… YDNS edition.  This list is compiled from my experience and various other guides in the public domain.  Message me if you don&#39;t feel your guide has been properly credited here.
+# RPi all-in-one box
+
+Starting RPi from scratch for RADIUS, Pi-HOLE, UNIFI CONTROLLER, LAMP… YDNS edition.  This list is compiled from my experience and various other guides in the public domain.  Message me if you don&#39;t feel your guide has been properly credited here.
+
+# Instructions
+
+[Start in the wiki](https://github.com/jeepmullet/rpi/wiki)
+
 
 ##credits:
 
@@ -11,4 +16,3 @@ RPi all-in-one box
 - [http://www.jeffgeerling.com/blogs/jeff-geerling/raspberry-pi-microsd-card](http://www.jeffgeerling.com/blogs/jeff-geerling/raspberry-pi-microsd-card)
 - [https://jamielinux.com/docs/openssl-certificate-authority/introduction.html](https://jamielinux.com/docs/openssl-certificate-authority/introduction.html)
 - [https://dcamero.azurewebsites.net/freeradius-daloradius.html](https://dcamero.azurewebsites.net/freeradius-daloradius.html)
-
